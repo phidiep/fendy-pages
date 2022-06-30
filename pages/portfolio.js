@@ -48,6 +48,27 @@ export default function Portfolio() {
       techStack: "",
     },
   ];
+  const honor = [
+    {
+      name : "BINH DUONG HACKATHON",
+      time : "NOV 2017 -Binh Duong, Viet Nam",
+      prize : "Third prize",
+      detail: `A Hackathon competition in Binh Duong Smart City Sunmmit that find a solution to develop Binh Duong City. 
+      Create a traffic app can be used with free hand mode by using voice recognition in android and Java server.`
+    },
+    {
+      name : "AWS HACKATHON",
+      time : "JAN 2018 - Ho Chi Minh, Viet Nam",
+      prize : "Third prize",
+      detail: `Integrating Binh Duong Hackathon traffic app that we made before with AWS like AWS Lex, AWS rekognition,...`
+    },
+    {
+      name : "ANGELHACK HACKATHON: SMART MOBILITY",
+      time : "APR 2018 - Ho Chi Minh, Viet Nam",
+      prize : "Third prize",
+      detail: `Create a demo website to show continuous shipping from seller to buyer using Python, Django, and Leaflet.`
+    },
+  ]
   const cert = [
     {
       name : "TOEIC 675",
@@ -62,7 +83,6 @@ export default function Portfolio() {
       time : "2022-04"
     },
   ]
-
 
   return (
     <>
@@ -82,27 +102,15 @@ export default function Portfolio() {
                 I’m a fullstack engineer and try to moving my skill to cloud
                 especially AWS
               </Typography.Title>
-              <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ">
-              <Tag
-                icon={<YoutubeOutlined style={{ verticalAlign: "0.125em" }} />}
-                color="#cd201f"
-              >
-                Youtube
-              </Tag>
+              <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ" >
+                <YoutubeOutlined style={{padding:10}}/>
               </Link>
-              <Tag
-                icon={<FacebookOutlined style={{ verticalAlign: "0.125em" }} />}
-                color="#3b5999"
-              >
-                Facebook
-              </Tag>
               <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ">
-              <Tag
-                icon={<LinkedinOutlined style={{ verticalAlign: "0.125em" }} />}
-                color="#55acee"
-              >
-                LinkedIn
-              </Tag>
+              <FacebookOutlined  style={{padding:10}}/>
+              </Link>
+              
+              <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ" >
+              <LinkedinOutlined style={{padding:10}}/>
               </Link>
             </Col>
           </Row>
@@ -135,7 +143,7 @@ export default function Portfolio() {
               </Timeline>
             </Col>
           </Row>
-          <Row justify="center" style={{ minHeight: "80vh" }}>
+          <Row justify="center" >
             <Col span={4}></Col>
             <Col span={8}>
             <Typography.Title level={2}>Certification</Typography.Title>
@@ -144,6 +152,27 @@ export default function Portfolio() {
                   <Timeline.Item key={index}>
                     <Typography.Title level={5}>{data.name}</Typography.Title>
                     <Text style={{ fontWeight: "lighter" }} italic>{data.time}</Text>
+                  </Timeline.Item>
+                ))}
+              </Timeline>
+            </Col>
+          </Row>
+          <Row justify="center" style={{ minHeight: "80vh" }}>
+            <Col span={4}></Col>
+            <Col span={8}>
+            <Typography.Title level={2}>Honor</Typography.Title>
+              <Timeline reverse={"true"}>
+                {honor.map((data,index) => (
+                  <Timeline.Item key={index}>
+                    <Typography.Title level={5}>{data.name}</Typography.Title>
+                    <Text style={{ fontWeight: "lighter" }} italic>{data.time}</Text>
+                    <Text>{data.prize}</Text>
+                    <Paragraph
+                      ellipsis={{ rows: 5, expandable: true, symbol: "more" }}
+                      style={{ width: 700 }}
+                    >
+                      {data.detail}
+                    </Paragraph>
                   </Timeline.Item>
                 ))}
               </Timeline>

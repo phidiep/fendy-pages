@@ -1,7 +1,4 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
@@ -25,6 +22,13 @@ export default function Index() {
       title: "Portfolio",
       description: "My portfolio",
     },
+    {
+      link: "gallery",
+      img: "https://drscdn.500px.org/photo/1050226083/m%3D900/v2?sig=334fd7364bda2815cab85dbb76557b9d7a0c520b77aa4678f0e64be52fc13668 ",
+      imgAlt: "kimono in snow by fendy studio on 500px.com",
+      title: "Gallery",
+      description: "My Gallery",
+    },
   ];
   return (
     <>
@@ -35,8 +39,8 @@ export default function Index() {
         <Container>
         <Row justify="center" > 
         <div style={{display:"flex"}}>
-          {info.map((item) => (
-            <Link href={`/${item.link}`}>
+          {info.map((item,index) => (
+            <Link href={`/${item.link}`} key={index}>
               <Card 
                 hoverable
                 style={{ width: 240 , margin:20}}

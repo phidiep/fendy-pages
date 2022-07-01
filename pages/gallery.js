@@ -92,10 +92,8 @@ export default function Gallery() {
           </div>
         </Container>
       </Layout>
-      <Script
-        type="text/javascript"
-        src="/js/imagesloaded.pkgd.min.js"
-      ></Script>
+      <link rel="stylesheet" type="text/css" href="css/base.css" />
+      <Script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></Script>
       <Script type="text/javascript" src="/js/masonry.pkgd.min.js"></Script>
       <Script type="text/javascript" src="/js/charming.min.js"></Script>
       <Script type="text/javascript" src="/js/TweenMax.min.js"></Script>

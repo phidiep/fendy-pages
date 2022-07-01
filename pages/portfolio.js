@@ -1,11 +1,6 @@
 import { Timeline, Avatar, Layout, Col, Row, Typography, Tag } from "antd";
-import {
-  FacebookOutlined,
-  LinkedinOutlined,
-  YoutubeOutlined,
-} from "@ant-design/icons";
 import Link from "next/link";
-import Title from "antd/lib/skeleton/Title";
+import { MailFilled,LinkedinFilled,GithubFilled } from "@ant-design/icons";
 const { Content } = Layout;
 const { Text, Paragraph } = Typography;
 export default function Portfolio() {
@@ -37,7 +32,7 @@ export default function Portfolio() {
       role: "System integration Engineer",
       companyName: "AXAS CO.,LTD.",
       time: "AUG 2019 - Present - Tokyo, Japan",
-      detail: `1. Bank system web app - coding and testing (Tech stack: Javascript, Java, HTML, CSS) 
+      detail: `1. Bank system web app - coding and testing (Tech stack: Javascript, Java, HTML, CSS)
       2.Video Conference web app - coding, testing, and document writing (Tech stack: Angular,
       RxJS, TypeScript, CSS, HTML).
       3.Architecture sketch web app - coding, testing, and document writing (Tech stack: Angular,
@@ -83,12 +78,11 @@ export default function Portfolio() {
       time : "2022-04"
     },
   ]
-
   return (
     <>
       <Layout style={{ minHeight: "100vh", backgroundColor: "white" }}>
         <Content>
-          <Row style={{ minHeight: "20vh", maxwidth:700 }}></Row>
+          <Row style={{ minHeight: "10vh", maxwidth:700 }}></Row>
           <Row justify="center" style={{ minHeight: "20vh" }}>
             <Col span={4} style={{ textAlign: "center" }}>
               <Avatar size={200} src="/assets/portfolio/avatar.jpg" />
@@ -99,25 +93,26 @@ export default function Portfolio() {
                 FULLSTACK WEB DEVELOPER
               </Typography.Title>
               <Typography.Title level={5} style={{ fontWeight: "lighter" }}>
-                I’m a fullstack engineer and try to moving my skill to cloud
-                especially AWS
+                I’m a fullstack engineer with some AWS cloud skills.
               </Typography.Title>
-              <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ" >
-                <YoutubeOutlined style={{padding:10}}/>
+              <Link href="https://github.com/phidiep" >
+              <a><GithubFilled style={{ fontSize: '2em'}}/><span style={{padding:"0.5em"}}>Github</span> </a>
               </Link>
-              <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ">
-              <FacebookOutlined  style={{padding:10}}/>
+
+              <Link href="https://www.linkedin.com/in/diepbaophi/" >
+              <a style={{padding: 50}}><LinkedinFilled style={{ fontSize: '2em', color: '#0a66c2' }} /><span style={{padding:"0.5em"}}>LinkedIn</span> </a>
               </Link>
               
-              <Link href="https://www.youtube.com/channel/UCCNjyfVOMCDWOlpqqIIT4lQ" >
-              <LinkedinOutlined style={{padding:10}}/>
-              </Link>
+              <MailFilled style={{ fontSize: '2em', color: 'red'}}/><Text style={{padding:"0.5em"}} copyable>phidiepbao29995@gmail.com</Text>
+
+
             </Col>
           </Row>
-          <Row justify="center" style={{ minHeight: "80vh" }}>
-            <Col span={4}></Col>
+          <Row justify="center" style={{ minHeight: "70vh" }}>
+            <Col span={4} style={{textAlign : "center"}}>
+            </Col>
             <Col span={8}>
-            <Typography.Title level={2}>Work</Typography.Title>
+            <Typography.Title level={4}>Working Experience</Typography.Title>
               <Timeline reverse={"true"}>
                 {timelineData.map((data) => (
                   <Timeline.Item key={data.key}>
@@ -146,7 +141,7 @@ export default function Portfolio() {
           <Row justify="center" >
             <Col span={4}></Col>
             <Col span={8}>
-            <Typography.Title level={2}>Certification</Typography.Title>
+            <Typography.Title level={4}>Certification</Typography.Title>
               <Timeline reverse={"true"}>
                 {cert.map((data,index) => (
                   <Timeline.Item key={index}>
@@ -160,7 +155,7 @@ export default function Portfolio() {
           <Row justify="center" style={{ minHeight: "80vh" }}>
             <Col span={4}></Col>
             <Col span={8}>
-            <Typography.Title level={2}>Honor</Typography.Title>
+            <Typography.Title level={4}>Honor</Typography.Title>
               <Timeline reverse={"true"}>
                 {honor.map((data,index) => (
                   <Timeline.Item key={index}>

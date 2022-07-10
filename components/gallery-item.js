@@ -25,8 +25,6 @@ export default function GalleryItem({ name, picture }) {
         alt={name}
         preview={false}
         width={200}
-
-        onClick={showModal}
       />
       {isModalVisible && (
         <ImageModel
@@ -35,7 +33,7 @@ export default function GalleryItem({ name, picture }) {
           data = {picture}
         ></ImageModel>
       )}
-      {isHovering && <div className={style.info}>
+      {isHovering && <div className={style.info} onClick={showModal}>
         <Space size="small">
         <HeartFilled />69
         <CommentOutlined />222

@@ -1,0 +1,23 @@
+.image {
+  display: inline;
+  flex : 1 0 0%;
+  line-height: 100vmax;
+}
+.info {
+  display: inline;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.281) ;
+  color: white;
+}
+.background {
+  flex: 1 0 0%;
+  height: 200px;
+  text-align: center;
+  background-color: black;
+  overflow: hidden;
+  line-height: 200px
+}
